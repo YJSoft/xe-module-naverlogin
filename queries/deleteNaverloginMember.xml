@@ -1,0 +1,8 @@
+<query id="deleteNaverloginMember" action="delete">
+	<tables>
+		<table name="naverlogin_member" />
+	</tables>
+	<conditions>
+		<condition operation="equal" column="srl" var="srl" notnull="notnull" />
+	</conditions>
+</query>

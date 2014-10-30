@@ -1,0 +1,9 @@
+<query id="insertNaverloginMember" action="insert">
+	<tables>
+		<table name="naverlogin_member" />
+	</tables>
+	<columns>
+		<column name="srl" var="srl" notnull="notnull" />
+		<column name="enc_id" var="enc_id" notnull="notnull" />
+	</columns>
+</query>

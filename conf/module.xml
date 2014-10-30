@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module>
+	<grants />
+	<permissions />
+	<actions>
+		<action name="dispNaverloginAdminConfig" type="view" menu_name="naverlogin" menu_index="true" admin_index="true" />
+		<action name="dispNaverloginOAuth" type="view"/>
+		<action name="procNaverloginOAuth" type="controller" />
+        <action name="procNaverloginAdminInsertConfig" type="controller" standalone="false" />
+	</actions>
+	<menus>
+		<menu name="naverlogin" type="all">
+			<title xml:lang="en">XE Naver Login</title>
+			<title xml:lang="ko">XE Naver Login</title>
+			<title xml:lang="jp">XE Naver Login</title>
+		</menu>
+	</menus>
+</module>
