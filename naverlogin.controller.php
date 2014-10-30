@@ -190,7 +190,11 @@ class naverloginController extends naverlogin
 			$trigger_output = ModuleHandler::triggerCall ('member.procMemberInsert', 'before', $config);
 			if(!$trigger_output->toBool ()) return $trigger_output;
 			// Check if an administrator allows a membership
-			if($config->enable_join != 'Y') return $this->stop ('msg_signup_disabled');
+			if($config->enable_join != 'Y')
+			{
+				$this->error_message = 'msg_signup_disabled';
+				return false;
+			}
 
 			$args = new stdClass();
 			list($args->email_id, $args->email_host) = explode('@', $xmlDoc->data->response->email->body);
@@ -200,6 +204,9 @@ class naverloginController extends naverlogin
 			$args->find_account_answer=md5($code) . '@' . $args->email_host;
 			$args->find_account_question="1";
 			$args->nick_name=$xmlDoc->data->response->nickname->body;
+			while($oMemberModel->getMemberSrlByNickName($args->nick_name)){
+				$args->nick_name=$xmlDoc->data->response->nickname->body . substr(md5($code . rand(0,9999)),0,5);
+			}
 			$args->password=md5($code) . "a1#";
 			$args->user_id=substr($args->email_id,0,20);
 			while($oMemberModel->getMemberInfoByUserID($args->user_id)){
