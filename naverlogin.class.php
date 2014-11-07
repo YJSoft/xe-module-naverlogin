@@ -1,6 +1,4 @@
 <?php
-/* Copyright (C) NAVER <http://www.navercorp.com> */
-
 /**
  * @class  naverlogin
  * @author YJSoft (yjsoft@yjsoft.pe.kr)
