@@ -1,7 +1,7 @@
 <?php
 /**
  * @class  naverloginAdminView
- * @author NAVER (developers@xpressengine.com)
+ * @author YJSoft (yjsoft@yjsoft.pe.kr)
  * @brief  naverlogin module admin view class.
  */
 class naverloginAdminView extends naverlogin
