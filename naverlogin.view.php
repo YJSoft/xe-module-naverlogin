@@ -1,8 +1,7 @@
 <?php
-/* Copyright (C) NAVER <http://www.navercorp.com> */
 /**
  * @class  naverloginView
- * @author NAVER (developers@xpressengine.com)
+ * @author YJSoft (yjsoft@yjsoft.pe.kr)
  * @brief naverlogin view class of the module
  */
 class naverloginView extends naverlogin
