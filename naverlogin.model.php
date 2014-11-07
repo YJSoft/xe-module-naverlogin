@@ -1,8 +1,6 @@
 <?php
-/* Copyright (C) NAVER <http://www.navercorp.com> */
-
 /**
- * @author NAVER (developers@xpressengine.com)
+ * @author YJSoft (yjsoft@yjsoft.pe.kr)
  */
 class naverloginModel extends naverlogin
 {
@@ -28,6 +26,9 @@ class naverloginModel extends naverlogin
 		return $this->config;
 	}
 
+	/**
+	 * @brief random한 state값 생성
+	 */
 	function generate_state() {
 		$mt = microtime();
 		$rand = mt_rand();
@@ -35,5 +36,5 @@ class naverloginModel extends naverlogin
 	}
 }
 
-/* End of file profiler.model.php */
-/* Location: ./modules/profiler/profiler.model.php */
+/* End of file naverlogin.model.php */
+/* Location: ./modules/naverlogin/naverlogin.model.php */
